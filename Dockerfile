@@ -5,6 +5,8 @@ RUN ls -al
 
 RUN pwd
 
+RUN echo "hello"
+
 # Set working directory
 WORKDIR my-app
 
