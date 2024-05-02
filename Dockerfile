@@ -4,7 +4,7 @@ FROM node:14-alpine as build
 RUN echo "hello"
 
 # Set working directory
-#WORKDIR my-app
+WORKDIR my-app
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
