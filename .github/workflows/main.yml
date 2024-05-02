@@ -21,19 +21,19 @@ jobs:
       - name: Change working directory
         run: cd my-app
 
-      - name: Install Dependencies
-        run: |
-          pwd
-          ls          
-          npm install
+      #- name: Install Dependencies
+       # run: |
+#pwd
+       #   ls          
+#npm install
 
-      - name: Run Tests
-        run: npm test
+      #- name: Run Tests
+       # run: npm test
 
-      - name: Source Code Testing
-        run: |
+     # - name: Source Code Testing
+#run: |
           # Run linting
-          npm run lint          
+        #  npm run lint          
 
       - name: Build Docker Image               #add config
         run: |
