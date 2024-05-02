@@ -48,6 +48,9 @@ jobs:
           ls -al 
           pwd
           cd my-app
+          ls -al 
+          pwd
+
           docker build -t bo .
           docker tag bo:latest 471112722662.dkr.ecr.us-east-1.amazonaws.com/bo:latest
 
