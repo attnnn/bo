@@ -23,7 +23,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd ../my-app
+          pwd
+          ls          
           npm install
 
       - name: Run Tests
