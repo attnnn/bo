@@ -26,7 +26,7 @@ RUN pwd
 
 RUN echo "After*****************"
 
-RUN cd my-app
+#RUN cd my-app
 
 # Build app
 RUN npm run build
