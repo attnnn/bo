@@ -1,5 +1,5 @@
 # Use the official lightweight Node.js 14 image
-FROM node:14-alpine as 
+FROM node:14-alpine as build
 
 RUN echo "hello"
 
