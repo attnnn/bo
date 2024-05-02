@@ -8,7 +8,7 @@ RUN pwd
 RUN echo "hello"
 
 # Set working directory
-WORKDIR my-app
+#WORKDIR my-app
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
