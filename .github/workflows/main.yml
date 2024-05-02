@@ -48,7 +48,7 @@ jobs:
           ls -al 
           pwd
           echo " before cd"
-          cd my-app
+          
           echo "after cd"
           ls -al 
           pwd
