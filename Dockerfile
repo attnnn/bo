@@ -1,6 +1,10 @@
 # Use the official lightweight Node.js 14 image
 FROM node:14-alpine as build
 
+RUN ls -al
+
+RUN pwd
+
 # Set working directory
 WORKDIR my-app
 
