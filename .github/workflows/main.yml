@@ -18,6 +18,14 @@ jobs:
            pwd
            ls
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      
+      - name: Install Dependencies
+        run: npm install
+
      # - name: Change working directory
 #run: cd my-app
 
