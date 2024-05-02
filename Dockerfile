@@ -18,7 +18,7 @@ RUN pwd
 
 RUN echo "before*****************"
 # Copy app source
-COPY . .
+COPY ./my-app .
 
 RUN ls -al
 
