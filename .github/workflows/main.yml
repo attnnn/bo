@@ -47,7 +47,7 @@ jobs:
         run: |
           ls -al 
           pwd
-          docker build -t bo . -f my-app/Dockerfile
+          docker build -t bo -f my-app/Dockerfile
           docker tag bo:latest 471112722662.dkr.ecr.us-east-1.amazonaws.com/bo:latest
 
       - name: Set up AWS credentials
