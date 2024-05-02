@@ -13,8 +13,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Change working directory
+        run: cd my-app
+
       - name: Install Dependencies
-        run: npm install
+        run: |
+        npm init 
+        npm install
 
       - name: Run Tests
         run: npm test
