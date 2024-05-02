@@ -1,9 +1,5 @@
 # Use the official lightweight Node.js 14 image
-FROM node:14-alpine as build
-
-RUN ls -al
-
-RUN pwd
+FROM node:14-alpine as 
 
 RUN echo "hello"
 
@@ -16,8 +12,21 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+RUN ls -al
+
+RUN pwd
+
+RUN echo "before*****************"
 # Copy app source
 COPY . .
+
+RUN ls -al
+
+RUN pwd
+
+RUN echo "After*****************"
+
+WORKDIR my-app
 
 # Build app
 RUN npm run build
