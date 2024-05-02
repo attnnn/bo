@@ -36,15 +36,16 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1  # Replace with your AWS region
 
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+      
       - name: Push Docker Image to ECR                  #add config
         run: |
           docker push 471112722662.dkr.ecr.us-east-1.amazonaws.com/bo:latest
 
-      - name: Configure kubectl for EKS
-        uses: aws-actions/amazon-eks-command@v1
-        with:
-          eks-command: update-kubeconfig
-          cluster-name: bo-cluster
+      - name: Update kube config
+        run: aws eks update-kubeconfig --name bo-cluster --region us-east-1     
 
       - name: Deploy to AWS EKS
         run: |
