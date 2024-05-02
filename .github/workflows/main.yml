@@ -18,8 +18,8 @@ jobs:
            pwd
            ls
 
-      - name: Change working directory
-        run: cd my-app
+     # - name: Change working directory
+#run: cd my-app
 
       #- name: Install Dependencies
        # run: |
