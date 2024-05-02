@@ -47,10 +47,12 @@ jobs:
         run: |
           ls -al 
           pwd
+          echo " before cd"
           cd my-app
+          echo "after cd"
           ls -al 
           pwd
-
+          echo "**********************************"
           docker build -t bo .
           docker tag bo:latest 471112722662.dkr.ecr.us-east-1.amazonaws.com/bo:latest
 
